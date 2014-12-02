@@ -2,11 +2,11 @@ class PostsController < ApplicationController
   before_action :find_post, :only => [:show, :update, :destroy]
 
   def index
-    render :json => Post.all
+    render :json => Post.all, :status => 200
   end
 
   def show
-    render :json => @post
+    render :json => @post, :status => 200
   end
 
   def create
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   def find_post
     @post = Post.find_by(id: params[:id])
 
-    render :json => @post, :status => 422 if @post.nil?
+    render :json => {error: "you did it wrong"}, :status => 422 if @post.nil?
   end
 
   def post_params
