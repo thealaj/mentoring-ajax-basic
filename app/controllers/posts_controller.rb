@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      render :json => post, :status => 200
+      render :json => @post, :status => 200
     else
       render_errors
     end
