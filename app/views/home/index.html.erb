@@ -1,1 +1,72 @@
 <h3>Welcome to Learning Ajax</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Rest Verb</th>
+      <th>URL</th>
+      <th>Params</th>
+      <th>Optional Params</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>View all Posts</td>
+      <td>GET</td>
+      <td>/posts.json</td>
+      <td>n/a</td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>View one post</td>
+      <td>GET</td>
+      <td>/posts/:id.json</td>
+      <td>n/a</td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>Create a new post</td>
+      <td>POST</td>
+      <td>/posts.json</td>
+      <td>
+        posts: must hold all of the data of a post <br>
+        posts.body: must not be empty <br>
+        i.e.:
+        <code>
+          {
+            posts: {
+              body: "must not be empty"
+            }
+          }
+        </code>
+      </td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>Update a post</td>
+      <td>PUT</td>
+      <td>/posts/:id.json</td>
+      <td>
+        posts: must hold all of the data of a post <br>
+        posts.body: must not be empty <br>
+        i.e.:
+        <code>
+          {
+            posts: {
+              body: "must not be empty"
+            }
+          }
+        </code>
+      </td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>Delete a post</td>
+      <td>DELETE</td>
+      <td>/posts/:id.json</td>
+      <td>n/a</td>
+      <td>n/a</td>
+    </tr>
+  </tbody>
+</table>
