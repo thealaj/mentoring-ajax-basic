@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    if @post.destory
+    if @post.destroy
       render :json => { success: true }, :status => 200
     else
       render_errors
